@@ -556,7 +556,8 @@ reserved_type_names() ->
 is_valid_name_head(S) ->
   (S >= $A andalso S =< $Z) orelse
   (S >= $a andalso S =< $z) orelse
-  S =:= $_.
+  S =:= $_ orelse
+  S =:= $-.
 
 %% @private In addition to what applies to leading char, body char can be 0-9.
 is_valid_name_char(S) -> is_valid_name_head(S) orelse
